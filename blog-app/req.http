@@ -1,0 +1,100 @@
+###create user 
+POST http://localhost:5000/user-api/users
+content-type: application/json
+
+{
+    "firstName" : "tanmai",
+    "lastName" : "gara",
+    "email" : "tanmaigara@gmail.com",
+    "password" : "tantadan",
+    "profileImageUrl" : "https://www.vecteezy.com/free-photos/dog"
+}
+###create author 
+POST http://localhost:5000/author-api/users
+content-type: application/json
+
+{
+     "firstName" : "nithin",
+    "lastName" : "gara",
+    "email" : "nithin@gmail.com",
+    "password" : "nithinthin",
+    "profileImageUrl" : "https://www.vecteezy.com/free-photos/dog"
+
+}
+
+//authenticate user(login)
+###
+POST http://localhost:5000/author-api/authenticate
+Content-Type: application/json
+
+{
+    "email":"tan@gmail.com",
+    "password":"tanmai" 
+}
+//logout
+###
+GET http://localhost:5000/common-api/logout
+
+###create article
+POST http://localhost:5000/author-api/articles
+Content-Type: application/json
+
+{
+    "author": "69897067d4a5bc24e4aac7f4",
+    "title" : "test1 article",
+    "category": "programming",
+    "Content":"content of test1 article"
+}
+
+###read articles
+GET http://localhost:5000/author-api/articles/69897067d4a5bc24e4aac7f4
+
+
+###update article
+POST http://localhost:5000/author-api/articles
+Content-Type: application/json
+
+{
+    "author": "69897067d4a5bc24e4aac7f4",
+    "articleId": "69898d9ba114e8b069510cf3",
+    "title" : "test1 article modified ",
+    "category": "programming new",
+    "Content":"content of test1 article"
+}
+
+### delete 
+DELETE http://localhost:5000/author-api/articles/69898d9ba114e8b069510cf3
+
+//read articles by user id
+###
+GET http://localhost:5000/user-api/users
+
+//write comments to the article
+###
+POST http://localhost:5000/user-api/comments
+Content-Type: application/json
+
+{
+    "articleId":"698a0cc52f5af7dd507eef42",
+    "comment":"this article is very useful to learn python"
+}
+
+###admin blocks user
+GET http://localhost:5000/admin-api/admin-block/69897067d4a5bc24e4aac7f4
+
+
+###admin unblocks user
+GET http://localhost:5000/admin-api/admin-unblock/69897067d4a5bc24e4aac7f4
+
+###change password
+PUT http://localhsot:5000/common-api/change-password/69897067d4a5bc24e4aac7f4
+Content-Type: application/json
+
+{
+    "currPassword":"admin",
+"newPassword    " : "gidmin"
+}
+
+//handle wrong paths
+###
+GET http://localhost:5000/test
