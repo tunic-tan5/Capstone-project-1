@@ -56,7 +56,7 @@ export const useAuth = create(
           });
         }
       },
-
+      //checking session
       // SESSION CHECK
       checkAuth: async () => {
         set({ loading: true });
