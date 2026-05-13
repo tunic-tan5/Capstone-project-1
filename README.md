@@ -72,9 +72,9 @@ Capstone-Project/
     ├── vite.config.js      # Vite configuration
     └── package.json        # Frontend dependencies
 
-# ⚙️ Local Setup & Installation
+# Local Setup & Installation
 
-## 📌 Prerequisites
+## Prerequisites
 
 Before running the project, make sure you have:
 
@@ -84,30 +84,45 @@ Before running the project, make sure you have:
 
 ---
 
-# 1️⃣ Backend Setup
+## 1. Backend Setup
 
-### 📂 Navigate to Backend Directory
+### Navigate to Backend Directory
 
-```bash
-cd blog-app-backend
-📦 Install Dependencies
-npm install
-🔐 Create .env File
+    cd blog-app-backend
 
-Create a .env file inside the blog-app-backend folder and add:
+### Install Dependencies
 
-PORT=4000
-DB_URL=your_mongodb_connection_string
+    npm install
 
-# Add your JWT secrets and Cloudinary API credentials
-▶️ Start Backend Server
-npm start
-2️⃣ Frontend Setup
-📂 Navigate to Frontend Directory
-cd blog-app-frontend
-📦 Install Dependencies
-npm install
-▶️ Start Vite Development Server
-npm run dev
-🌐 Open in Browser
-http://localhost:5173
+### Create `.env` File
+
+Create a `.env` file inside the `blog-app-backend` folder and add:
+
+    PORT=4000
+    DB_URL=your_mongodb_connection_string
+
+    # Add your JWT secrets and Cloudinary API credentials
+
+### Start Backend Server
+
+    npm start
+
+---
+
+## 2. Frontend Setup
+
+### Navigate to Frontend Directory
+
+    cd blog-app-frontend
+
+### Install Dependencies
+
+    npm install
+
+### Start Vite Development Server
+
+    npm run dev
+
+### Open in Browser
+
+    http://localhost:5173
