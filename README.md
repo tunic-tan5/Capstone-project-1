@@ -71,3 +71,28 @@ Capstone-Project/
     ├── public/             # Static assets
     ├── vite.config.js      # Vite configuration
     └── package.json        # Frontend dependencies
+
+⚙️ Local Setup & Installation
+Prerequisites
+Node.js installed on your machine.
+MongoDB instance (local or Atlas cluster).
+Cloudinary account for media storage.
+1. Backend Setup
+Navigate to the backend directory:
+cd blog-app-backend
+Install dependencies:
+npm install
+Create a .env file in the blog-app-backend folder with the necessary variables:
+PORT=4000
+DB_URL=your_mongodb_connection_string
+# Add your JWT secrets and Cloudinary API credentials
+Start the backend server:
+npm start
+2. Frontend Setup
+Open a new terminal and navigate to the frontend directory:
+cd blog-app-frontend
+Install dependencies:
+npm install
+Start the Vite development server:
+npm run dev
+Open the provided local URL (usually http://localhost:5173) in your browser.
