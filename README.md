@@ -1,4 +1,4 @@
-<h1 align="center">📝 Blog Application - Capstone Project</h1>
+ <h1 align="center">📝 Blog Application - Capstone Project</h1>
 
 <p align="center">
 A full-stack blog platform allowing users to read, author, and manage blog posts.
@@ -71,10 +71,13 @@ Capstone-Project/
     ├── public/             # Static assets
     ├── vite.config.js      # Vite configuration
     └── package.json        # Frontend dependencies
+```
 
-# Local Setup & Installation
+---
 
-## Prerequisites
+# ⚙️ Local Setup & Installation
+
+## 📌 Prerequisites
 
 Before running the project, make sure you have:
 
@@ -84,45 +87,62 @@ Before running the project, make sure you have:
 
 ---
 
-## 1. Backend Setup
+## 1️⃣ Backend Setup
 
 ### Navigate to Backend Directory
 
-    cd blog-app-backend
+```bash
+cd blog-app-backend
+```
 
 ### Install Dependencies
 
-    npm install
+```bash
+npm install
+```
 
 ### Create `.env` File
 
 Create a `.env` file inside the `blog-app-backend` folder and add:
 
-    PORT=4000
-    DB_URL=your_mongodb_connection_string
+```env
+PORT=4000
+DB_URL=your_mongodb_connection_string
 
-    # Add your JWT secrets and Cloudinary API credentials
+# Add your JWT secrets and Cloudinary API credentials
+```
 
 ### Start Backend Server
 
-    npm start
+```bash
+npm start
+```
 
 ---
 
-## 2. Frontend Setup
+## 2️⃣ Frontend Setup
 
 ### Navigate to Frontend Directory
 
-    cd blog-app-frontend
+```bash
+cd blog-app-frontend
+```
 
 ### Install Dependencies
 
-    npm install
+```bash
+npm install
+```
 
 ### Start Vite Development Server
 
-    npm run dev
+```bash
+npm run dev
+```
 
 ### Open in Browser
 
-    http://localhost:5173
+```bash
+http://localhost:5173
+```
+ 
