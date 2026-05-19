@@ -41,12 +41,7 @@ blog-app-frontend/
 ├── public/                # Static assets
 ├── src/
 │   ├── components/        # Reusable UI components
-│   ├── pages/             # Application pages
-│   ├── routes/            # Route configurations
-│   ├── store/             # Zustand state management
-│   ├── services/          # API calls
-│   ├── hooks/             # Custom hooks
-│   ├── utils/             # Utility functions
+│   ├── AuthStore/         # Zustand state management
 │   └── App.jsx
 │
 ├── vite.config.js
