@@ -1,132 +1,227 @@
-# 🖥️ Blog Application Frontend
+Blog App Frontend
+Frontend for the Blog Application Capstone Project built using React 19, Vite, Tailwind CSS v4, Zustand, React Router v7, and modern frontend tools.
 
-Frontend for the Blog Application Capstone Project built using React 19, Vite, Tailwind CSS v4, Zustand, and React Router v7.
-
----
-
-# 🚀 Features
-
-- Responsive modern UI
-- JWT Authentication
-- Role-based routing
-- Zustand state management
-- Blog creation and management
-- Image uploads
-- Protected routes
-- Toast notifications
-- Form validation using React Hook Form
+This frontend provides a complete user interface for a full stack blog platform, including authentication, dashboards, article management, comments, and profile customization.
 
 ---
 
-# 🛠️ Tech Stack
+Frontend Features
 
-- React 19
-- Vite
-- Tailwind CSS v4
-- React Router v7
-- Zustand
-- Axios
-- React Hook Form
-- React Hot Toast
-- Lucide React
-- React Icons
+Authentication pages for secure login and registration
+
+Role-based dashboards for different user types (User, Author, Admin)
+
+Article creation, editing, and management UI
+
+Comments system for blog interaction
+
+Profile settings management
+
+Theme switching support
+
+Responsive modern UI design
+
+Protected routes for secure navigation
+
+Toast notifications for user feedback
+
+Form validation using React Hook Form
+
+Image upload support integrated with backend
 
 ---
 
-# 📂 Folder Structure
+Frontend Tech Stack
 
-```bash
+React 19
+
+Vite
+
+React Router v7
+
+Tailwind CSS v4
+
+Zustand (state management)
+
+Axios (API communication)
+
+React Hook Form (form handling)
+
+React Hot Toast (notifications)
+
+Lucide React & React Icons (UI icons)
+
+---
+
+Frontend Development Process
+
+Created React application using Vite
+
+Organized scalable folder structure
+
+Configured routing using React Router v7
+
+Built reusable UI components
+
+Connected frontend with backend APIs using Axios
+
+Implemented Zustand for global state management
+
+Added JWT authentication handling
+
+Implemented protected routes for security
+
+Designed role-based dashboards:
+
+User dashboard
+
+Author dashboard
+
+Admin dashboard
+
+Integrated toast notifications for feedback
+
+Implemented responsive design using Tailwind CSS
+
+Added theme switching functionality
+
+Configured deployment using Vercel
+
+---
+
+Folder Structure
+
 blog-app-frontend/
 │
 ├── public/                # Static assets
 ├── src/
 │   ├── components/        # Reusable UI components
 │   ├── AuthStore/         # Zustand state management
-│   └── App.jsx
+│   ├── pages/             # Application pages
+│   ├── lib/               # Utility functions / API config
+│   ├── styles/            # Styling files
+│   ├── App.jsx
+│   └── main.jsx
 │
 ├── vite.config.js
 ├── package.json
 └── README.md
-```
 
 ---
 
-# ⚙️ Installation & Setup
+Main Features
 
-## 1️⃣ Clone Repository
+Responsive modern UI
 
-```bash
-git clone <repository-url>
-```
+Authentication system (JWT based)
 
----
+Role-based access control
 
-## 2️⃣ Navigate to Frontend Folder
+Protected routes
 
-```bash
-cd blog-app-frontend
-```
+Article creation and editing system
 
----
+Comment system
 
-## 3️⃣ Install Dependencies
+Theme switching support
 
-```bash
-npm install
-```
+Toast notifications
+
+Session persistence
 
 ---
 
-## 4️⃣ Create Environment File
+Frontend Pages
 
-Create a `.env` file in the frontend root directory.
+Home Page
 
-```env
+Login Page
+
+Register Page
+
+User Dashboard
+
+Author Dashboard
+
+Admin Dashboard
+
+Article Details Page
+
+Profile Settings Page
+
+---
+
+API Connection
+
+Axios is used for handling all API requests between frontend and backend.
+
+Environment variable:
+
 VITE_API_URL=http://localhost:4000
-```
 
 ---
 
-## 5️⃣ Start Development Server
+How To Run Frontend
 
-```bash
+Install dependencies:
+
+npm install
+
+Run development server:
+
 npm run dev
-```
 
----
+Frontend runs on:
 
-# 🌐 Frontend Runs On
-
-```bash
 http://localhost:5173
-```
 
 ---
 
-# 🔐 Authentication
+Available Scripts
 
-Authentication is handled using:
-
-- JWT Tokens
-- HTTP-only Cookies
-- Protected Routes
-
----
-
-# 📸 Image Uploads
-
-Images are uploaded through the backend using Cloudinary integration.
-
----
-
-# 📦 Build For Production
-
-```bash
+npm run dev
 npm run build
-```
+npm run preview
+npm run lint
 
 ---
 
-# 👨‍💻 Author
+UI Features
 
-Developed as part of a Full Stack Blog Application Capstone Project.
+Clean and modern responsive design
+
+Tailwind CSS utility-first styling
+
+Reusable component architecture
+
+Toast notifications for user actions
+
+Protected navigation routes
+
+Theme customization support
+
+---
+
+What I Learned
+
+React component architecture and reusable design
+
+State management using Zustand
+
+Frontend routing and protected routes
+
+API integration with backend
+
+JWT authentication handling
+
+Responsive UI development with Tailwind CSS
+
+Deployment using Vercel
+
+Real-world frontend project structure
+
+---
+
+Frontend Author Note
+
+This frontend was built as part of a MERN stack learning project by a CSE undergraduate student to practice real-world frontend development concepts.
