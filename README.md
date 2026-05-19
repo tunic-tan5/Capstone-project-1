@@ -1,118 +1,184 @@
- <h1 align="center">📝 Blog Application - Capstone Project</h1>
+ # Full Stack Blog Application
 
-<p align="center">
-A full-stack blog platform allowing users to read, author, and manage blog posts.
-</p>
+A modern full-stack MERN blog platform developed as part of my web development learning journey.
 
-<p align="center">
-The application features a distinct separation between Frontend and Backend, utilizing modern web technologies.
-</p>
+This application allows users to read, create, manage, and moderate blog articles through role-based access control with secure authentication and responsive UI design.
+
+The project follows a clear separation between Frontend and Backend using modern web technologies and industry-standard practices.
 
 ---
 
-# 🚀 Features
+# Features
 
-### 🔐 Role-Based Access Control
-- Separate portals and functionalities for Users, Authors, and Admins.
+## Role-Based Access Control
 
-### 🔑 Authentication & Authorization
-- Secure login and session management using JSON Web Tokens (JWT) and HTTP-only cookies.
+Separate functionalities and dashboards for:
 
-### 🖼️ Image Uploads
-- Integrated with Cloudinary for seamless media storage and management.
-
-### ⚡ State Management
-- Efficient frontend state handling using Zustand.
-
-### 🎨 Responsive UI
-- Modern, clean, and responsive design built with React 19 and Tailwind CSS v4.
+- Users
+- Authors
+- Admins
 
 ---
 
-# 🛠️ Tech Stack
+## Authentication & Authorization
 
-## Frontend (/blog-app-frontend)
+Secure authentication system using:
 
-- Framework: React 19 built with Vite
-- Styling: Tailwind CSS v4
-- Routing: React Router v7
-- State Management: Zustand
-- Form Handling: React Hook Form
-- HTTP Client: Axios
-- Icons & Notifications: Lucide React, React Icons, React Hot Toast
+- JSON Web Tokens (JWT)
+- HTTP-only Cookies
+- Protected Routes
+- Session Persistence
 
 ---
 
-## Backend (/blog-app-backend)
+## Article Management
 
-- Runtime: Node.js
-- Framework: Express.js
-- Database: MongoDB (Mongoose)
-- Authentication: JWT, bcryptjs, cookie-parser
-- File Uploads: Multer, Cloudinary
-- Environment: dotenv
+Authors can:
+
+- Create articles
+- Edit articles
+- Soft delete articles
+- Manage their own content
+
+Users can:
+
+- Read articles
+- Comment on articles
+
+Admins can:
+
+- Moderate users
+- Manage articles
+- Access admin APIs
 
 ---
 
-# 📂 Project Structure
+## Media Uploads
+
+Integrated Cloudinary support for image uploads and storage.
+
+---
+
+## State Management
+
+Efficient frontend state handling using Zustand.
+
+---
+
+## Responsive UI
+
+Modern, responsive, and clean user interface built using React 19 and Tailwind CSS.
+
+---
+
+# Tech Stack
+
+## Frontend (/frontend)
+
+- React 19
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Zustand
+- Axios
+- React Hook Form
+- React Hot Toast
+
+---
+
+## Backend (/backend)
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcrypt
+- cookie-parser
+- CORS
+- dotenv
+- multer
+- Cloudinary
+
+---
+
+# Repository Structure
 
 ```bash
-Capstone-Project/
-├── blog-app-backend/       # Node.js/Express backend
-│   ├── APIs/               # Route controllers (Admin, Author, User, Common)
-│   ├── config/             # Database and cloud configurations
-│   ├── middlewares/        # Custom middlewares (e.g., auth, error handling)
-│   ├── models/             # Mongoose schemas
-│   ├── services/           # Business logic
-│   └── server.js           # Entry point for the backend
+project-root/
+├── backend/
+│   ├── APIs/
+│   ├── config/
+│   ├── middlewares/
+│   ├── models/
+│   ├── services/
+│   ├── req.http
+│   ├── server.js
+│   └── README.md
 │
-└── blog-app-frontend/      # React/Vite frontend
-    ├── src/                # UI components, pages, and store
-    ├── public/             # Static assets
-    ├── vite.config.js      # Vite configuration
-    └── package.json        # Frontend dependencies
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── lib/
+│   │   ├── stores/
+│   │   ├── styles/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── README.md
+│
+├── vercel.json
+└── README.md
 ```
 
 ---
 
-# ⚙️ Local Setup & Installation
+# Local Setup & Installation
 
-## 📌 Prerequisites
+## Prerequisites
 
 Before running the project, make sure you have:
 
-- Node.js installed on your machine
-- MongoDB instance (Local or Atlas Cluster)
-- Cloudinary account for media storage
+- Node.js installed
+- MongoDB Atlas or local MongoDB setup
+- Cloudinary account for media uploads
 
 ---
 
-## 1️⃣ Backend Setup
+# Backend Setup
 
-### Navigate to Backend Directory
+## Navigate to Backend Directory
 
 ```bash
-cd blog-app-backend
+cd backend
 ```
 
-### Install Dependencies
+---
+
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Create `.env` File
+---
 
-Create a `.env` file inside the `blog-app-backend` folder and add:
+## Create `.env` File
+
+Create a `.env` file inside the backend folder and add:
 
 ```env
 PORT=4000
 DB_URL=your_mongodb_connection_string
-
-# Add your JWT secrets and Cloudinary API credentials
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
 ```
 
-### Start Backend Server
+---
+
+## Start Backend Server
 
 ```bash
 npm start
@@ -120,29 +186,74 @@ npm start
 
 ---
 
-## 2️⃣ Frontend Setup
+# Frontend Setup
 
-### Navigate to Frontend Directory
+## Navigate to Frontend Directory
 
 ```bash
-cd blog-app-frontend
+cd frontend
 ```
 
-### Install Dependencies
+---
+
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Start Vite Development Server
+---
+
+## Start Development Server
 
 ```bash
 npm run dev
 ```
 
-### Open in Browser
+---
 
-```bash
+# Open in Browser
+
+```
 http://localhost:5173
 ```
- 
+
+---
+
+# APIs Used
+
+| API       | Purpose |
+|-----------|----------|
+| UserAPI   | User registration, reading articles, comments |
+| AuthorAPI | Author registration and article management |
+| AdminAPI  | Admin moderation APIs |
+| CommonAPI | Login, logout, auth check, profile settings |
+
+---
+
+# Deployment
+
+- Frontend deployed using Vercel
+- Backend deployed using Render
+- MongoDB Atlas used for database hosting
+
+---
+
+# What I Learned From This Project
+
+- Building full-stack MERN applications
+- REST API development
+- Authentication and authorization
+- MongoDB schema design
+- State management using Zustand
+- Secure cookie handling
+- Cloudinary media uploads
+- Frontend and backend integration
+- Deployment workflow
+- Real-world project structuring
+
+---
+
+# Author
+
+Developed as a MERN Stack learning project by a CSE undergraduate student.
