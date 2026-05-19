@@ -43,7 +43,6 @@ blog-app-backend/
 ├── middlewares/           # Custom middleware
 ├── models/                # Mongoose schemas
 ├── services/              # Business logic
-├── uploads/               # Temporary uploaded files
 ├── server.js              # Entry point
 ├── package.json
 └── README.md
